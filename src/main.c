@@ -160,9 +160,7 @@ static void process_events(const int sig_fd, const int port_fd, const int timer_
         }
 
         if (fds[1].revents & POLLOUT) {
-            if (send_request(port_fd))
-                LOG_E("unable to write, error '%m'");
-            else
+            if (!send_request(port_fd))
                 fds[1].events = POLLIN;
         }
     }
