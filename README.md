@@ -10,7 +10,7 @@ Supported hardware
 
 * FSP EP-1000
 
-Using
+Usage
 =====
 
 ```
